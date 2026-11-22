@@ -16,13 +16,14 @@ Es parte de un metarepo. Si tienes acceso al repo padre privado `cajathon-trujil
 ## Flujo
 
 1. Issue en este repo, con criterio de aceptación.
-2. Rama desde `develop`: `<tipo>/<issue>-<slug>`, por ejemplo `feat/12-grafo-de-relaciones`.
+2. Rama desde `develop`: `<tipo>/<issue>-<slug>`, por ejemplo `feat/12-pantalla-inicial`.
    ```bash
-   gh issue develop 12 --base develop --name feat/12-grafo-de-relaciones --checkout
+   gh issue develop 12 --base develop --name feat/12-pantalla-inicial --checkout
    ```
 3. Commits en formato Conventional Commits. PR contra `develop` con un título `tipo(alcance): descripción` (lo valida la CI) y `Closes #12`.
 4. 1 aprobación de otra persona y **Squash and merge**.
 5. Release: PR `develop → main` titulado `release: vX.Y.Z`, con **merge commit** (nunca squash), y después tag.
+   En `app`, el merge del release lo hace Sebastian Rabanal (`CoreCodev`), dueño de la cuenta de Vercel: en el proyecto NASA, Vercel no desplegaba commits de otros autores.
 
 ## Verificaciones locales
 
@@ -32,4 +33,4 @@ pnpm lint && pnpm test && pnpm build
 
 ## Estado
 
-Stack: TypeScript con Vite, React y Sigma.js (grafo WebGL). Tipos generados desde el `openapi.json` de `motor`. El detalle y las versiones están en el ADR-0003 del repo padre; aún no hay código.
+Stack: TypeScript con Vite y React. Tipos generados desde el `openapi.json` de `motor`. El detalle y las versiones están en el ADR-0003 del repo padre; aún no hay código.
