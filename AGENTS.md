@@ -1,8 +1,8 @@
-# AGENTS.md — cajathon-trujillo-2026-thetigers-app
+# AGENTS.md — cajathon-trujillo-2026-cody-app
 
-Repo **público** del equipo TheTigers (Cajathon Trujillo 2026). Contiene la **interfaz web**: consume el contrato OpenAPI que publica `motor`.
+Repo **público** del equipo Cody (Cajathon Trujillo 2026). Contiene la **interfaz web**: consume el contrato OpenAPI que publica `motor`.
 
-Es parte de un metarepo. Si tienes acceso al repo padre privado `cajathon-trujillo-2026-thetigers`, su `AGENTS.md` y su `docs/INDICE.md` mandan sobre este archivo.
+Es parte de un metarepo. Si tienes acceso al repo padre privado `cajathon-trujillo-2026-cody`, su `AGENTS.md` y su `docs/INDICE.md` mandan sobre este archivo.
 
 ## Reglas
 
@@ -27,9 +27,9 @@ Es parte de un metarepo. Si tienes acceso al repo padre privado `cajathon-trujil
 ## Verificaciones locales
 
 ```bash
-# Pendiente de ADR-0003. Ejemplo para TypeScript: pnpm lint && pnpm test && pnpm build
+pnpm lint && pnpm test && pnpm build
 ```
 
 ## Estado
 
-Stack pendiente de ADR-0003 en el repo padre. Al definirlo, actualiza la sección de verificaciones y el `.gitignore`.
+Stack: TypeScript con Vite, React y Sigma.js (grafo WebGL). Tipos generados desde el `openapi.json` de `motor`. El detalle y las versiones están en el ADR-0003 del repo padre; aún no hay código.
